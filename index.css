@@ -1,0 +1,12 @@
+section {
+    border: 10px solid #B1ADAD; 
+    margin: 5% auto; 
+    font-family: Roboto Slab;
+    max-width: 2000px;
+    width: 80%;
+    
+}
+
+.titles {
+    text-align: center;
+}

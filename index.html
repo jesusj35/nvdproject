@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Chicago Crime Data</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css"> 
+        <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+		
+       
+    </head>
+    <body>
+        <!--Navigation Bar-->
+    	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Chicago Crime Data</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#introduction">Introduction<span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#data">Map Tool</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#data">Data</a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Maps
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" target="_blank" href="arsonMap.html">Arson Map</a>
+       		<a class="dropdown-item" target="_blank" href="homicideMap.html">Homicide Map</a>
+        	<a class="dropdown-item" target="_blank" href="kidnappingMap.html">Kidnapping Map</a>
+			<a class="dropdown-item" target="_blank" href="sexAssaultMap.html">Sexual Assault Map</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+        <!--Introduction-->
+        <section id="introduction">
+			<div class="container-fluid">
+				<h1 id="titles">Introduction</h1>
+				<h3>Objective</h3>
+				<p>
+					It is a well-known fact that Chicago’s overall crime rates are higher than the average in the USA, which is why we were interested into exploring the crime records dataset available in the city’s Open Data site and building a real world application to the knowledge we might extract from it. This dataset is updated weekly and includes the details of all recorded crimes in the city since 2001, which gives us a very large amount of data to work with.
+					We set our final goal for this project based on this dataset to building a tool for citizens and visitors of Chicago to be able to visualize how different types of crime are distributed and how they cluster across different areas of the city. Google Maps already gives an option to visualize the areas where crime is more frequent or more likely to happen but our goal goes beyond that. Users would be able to filter the clustering results by type of crime, time, date and location in which they occurred so that they could avoid certain areas and certain times and dates to avoid high crime likelihood. The results of our analysis could also be useful for the administration of the city to gain insight into the trends and tendencies of crime types’ distribution and correlation over time and use this for future predictions and the planning of crime-fighting strategies.
+				</p>
+				<h3>Our Team</h3>
+				<ul>
+					<li>Issac Torres</li>
+					<li>Carlos Tafoya</li>
+					<li>Cristina Almaraz Lopez</li>
+					<li>Reynaldo Cano</li>
+					<li>Jose De La Rosa</li>
+					<li>Jesus Juarez</li>
+				</ul>
+			</div>
+        </section>
+        <!--Data-->
+		<section id="maptool">
+            <h1 class="titles">Map Tool</h1>
+			<p>
+				The tool we built from this data is meant to be an awarness tool for people to use and find out different information about the crimes in chicago. In this website we included maps to look at the different crimes in Chicago such as arson, homicide, kidnapping, and sexual assault. In these maps you will be able to look at some of the most recent crimes that have happened and where they happened. The maps will cluster the crimes and tell you how many of a type of crime have happened in the area. With the map you can zoom in and the map will dynamically rearrange the clustes an break the areas of chicago further down. You can keep doing this until you see exactly where the crime happend. If you click on it, it will tell you a small description of the crime. With this tool we are hoping people are more aware of the type of crimes happening in Chicago and where they happen. We think this tool will be specially uselful wiht people visiting the city. They will know what areas to avoid and it will keep them safer when visitng the city. You can try out the tool under the "Maps" dropdown menu.
+			</p>
+        </section>
+        <section id="data">
+            <h1 class="titles">Data</h1>
+			<p>
+				The data we used was gathered from the City of Chicago website. This includes all crimes from 2001 to present. You can find the data and download it as an excel file. This data includes types of crimes, date, a short description of the crime, the coordinates of where exactly the crime happened, and other data. Since the data contained more than what we actually needed, we used python scripts to gather the data we needed and use it on the website tool as well as for the data mining algorithms we used. You can find the entire data set <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2/data">here.</a>
+			</p>
+			<h3>Techniques</h3>
+			<p>
+				To analyze the data we used a couple of different techniques to see where different types of crimes happen, how they correlate and the frquency in which they happened. You can find descripttions and results of the techniques used in our report. The techniques used include the following.
+			</p>
+			<ul>
+				<li>DBSCAN</li>
+				<li>HDBCAN</li>
+				<li>Outlier Analysis</li>
+				<li>Trend Analysis</li>
+			</ul>
+        </section>
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<script src="bootstrap.js"></script>
+    </body>
+</html>
